@@ -1,0 +1,17 @@
+* yqfk autofill for dgut (Dongguan University of Technology)
+
+** STRT Features to implement
+:LOGBOOK:
+- State "NEW"         ->  "STRT"       [2020-10-20 Tue 21:34]
+:END:
+
+*** STRT A single command to autofill the surveillence form
+:LOGBOOK:
+- State "NEW"         ->  "TODO"       [2020-10-20 Tue 21:08]
+- State "TODO"        ->  "STRT"       [2020-10-20 Tue 21:34]
+:END:
+
+*** TODO Remember username / password
+:LOGBOOK:
+- State "STRT"        ->  "TODO"       [2020-10-20 Tue 21:34]
+:END:
