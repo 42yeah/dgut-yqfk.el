@@ -8,10 +8,13 @@
 - State "NEW"         ->  "STRT"       [2020-10-20 Tue 21:34]
 :END:
 
-*** STRT A single command to autofill the surveillence form
+*** DONE A single command to autofill the surveillence form
+CLOSED: [2020-10-21 Wed 00:30]
 :LOGBOOK:
 - State "NEW"         ->  "TODO"       [2020-10-20 Tue 21:08]
 - State "TODO"        ->  "STRT"       [2020-10-20 Tue 21:34]
+- State "STRT"        ->  "QTD"        [2020-10-21 Wed 00:29]
+- State "QTD"         ->  "DONE"       [2020-10-21 Wed 00:30]
 :END:
 
 *** TODO Remember username / password
