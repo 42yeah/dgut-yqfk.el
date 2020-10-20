@@ -3,12 +3,35 @@
 
 * yqfk autofill for dgut (Dongguan University of Technology)
 
+** Screenshot
+
+[[./screenshot.jpg]]
+
+** How to use
+
+You can download the script to wherever you want, and
+
+#+BEGIN_SRC emacs-lisp
+(require 'yqfk)
+#+END_SRC
+
+And you will have a new command at your fingertip! Use ~M-x yqfk-submit<RET>~ to
+save 2 extra seconds every day!
+
+You can also bind it to a hotkey, if you want:
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "s-;") 'yqfk-submit)
+#+END_SRC
+
+Or to whatever key you wish.
+
 ** STRT Features to implement
 :LOGBOOK:
 - State "NEW"         ->  "STRT"       [2020-10-20 Tue 21:34]
 :END:
 
-*** DONE A single command to autofill the surveillence form
+*** DONE A single command to autofill the surveillance form
 CLOSED: [2020-10-21 Wed 00:30]
 :LOGBOOK:
 - State "NEW"         ->  "TODO"       [2020-10-20 Tue 21:08]
