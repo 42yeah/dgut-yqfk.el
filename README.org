@@ -7,7 +7,7 @@
 
 [[./screenshot.jpg]]
 
-** How to use
+** Getting started
 
 You can download the script to wherever you want, and
 
@@ -25,6 +25,24 @@ You can also bind it to a hotkey, if you want:
 #+END_SRC
 
 Or to whatever key you wish.
+
+** Getting started - 中文
+
+你可以把脚本下载到你想的任意地方，把它加到加载路径内，然后
+
+#+BEGIN_SRC emacs-lisp
+(require 'yqfk)
+#+END_SRC
+
+这样你就有一个崭新的指令了 - 使用 ~M-x yqfk-submit<RET>~ 来省下每天的那两秒钟！
+
+你也可以绑定个热键，譬如这样：
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "s-;") 'yqfk-submit)
+#+END_SRC
+
+或者绑去你想要的任意键位。
 
 ** STRT Features to implement
 :LOGBOOK:
