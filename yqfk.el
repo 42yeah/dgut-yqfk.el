@@ -28,6 +28,8 @@
                              connect_tel_2 continue_days can_submit whitelist
                              msg importantAreaMsg))
 
+(setq yqfk-nullify-keys '(important_area current_region))
+
 ;; Set the backend to url-retrieve because curl backend doesn't seem to have the
 ;; ability to delete cookies.
 (setq request-backend 'url-retrieve)
@@ -116,13 +118,15 @@
                                                     decoded-data)))
                      (loop for key in yqfk-exclude-keys
                            do (assoc-delete-all key basic-info))
+                     (loop for key in yqfk-nullify-keys
+                           do (setf (alist-get key basic-info) nil))
                      (submit-yqfk basic-info bearer)))))
 
 (defun submit-yqfk (data bearer)
   "Submit to yqfk system with DATA.  BEARER is needed to authenticate."
   (message "Submitting to yqfk")
   (setq yqfk-submit-data (json-encode (cdr data)))
-  (screen-dump (concat yqfk-submit-data "\n" bearer))
+  ;; (screen-dump (concat yqfk-submit-data "\n" bearer))
   (request
     yqfk-submit-url
     :type "POST"
@@ -141,5 +145,5 @@
        (insert msg))
 
 (request-response-url r)
-(provide 'init)
-;;; init.el ends here
+(provide 'yqfk)
+;;; yqfk.el ends here
